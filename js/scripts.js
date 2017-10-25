@@ -1,19 +1,27 @@
 var pigSentence = function(userPhrase) {
   var wordArray = userPhrase.split("");
   var vowels = ["a", "e", "i", "o", "u"];
+  var specialChar = ["q"];
+  var letter1 = userPhrase.charAt(0);
+  var letter2 = userPhrase.charAt(1);
+  var letter3 = userPhrase.charAt(2);
+  var theCut = userPhrase.substr(3);
+  var quite = userPhrase.substr(0);
 
     for (var x = 0; x < vowels.length; x ++ ) {
       if (vowels[x] === wordArray[0]) {
           $("#result").text(userPhrase + "-way");
         } else if ((vowels[x] !== wordArray[0]) && (vowels[x] !== wordArray[1]) && (vowels[x] !== wordArray[2])) {
-          var letter1 = userPhrase.charAt(0);
-          var letter2 = userPhrase.charAt(1);
-          var letter3 = userPhrase.charAt(2);
-          var theCut = userPhrase.substr(3);
-          var newThing = theCut + letter1 + letter2 + letter3 + "ay";
-          return newThing
+      var newThing = theCut + letter1 + letter2 + letter3 + "ay";
+      return newThing
         }
       }
+
+        for (var index = 0; x < specialChar.length; x ++ ) {
+          if (specialChar[x] === wordArray[0]); {
+            debugger
+            return quest; }
+          }
   };
 
 $(document).ready(function() {
