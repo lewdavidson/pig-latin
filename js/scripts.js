@@ -1,11 +1,12 @@
-$(document).ready(function(){
-  $("form#pig-form").submit(function(event){
+var pigSentence = function(userPhrase) {
+  return false;
+};
+
+$(document).ready(function() {
+  $("form#pig-form").submit(function(event) {
     event.preventDefault();
-    var phrase = ("input#phrase").val();
-    var result = pigSentence(sort);
+    var userPhrase = $("input#phrase").val();
+    var result = pigSentence(userPhrase);
     $("#result").text(result);
-
-
   });
-
 });
